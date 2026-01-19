@@ -1,15 +1,16 @@
 <template>
-  <van-nav-bar
-    title="Trello Board"
-    left-text="Back"
-    left-arrow
-    @click-left="onClickLeft"
-  />
+  <van-nav-bar title="Trello Board">
+    <template #left>
+      <router-link to="/">Board</router-link>
+    </template>
+    <template #right>
+      <router-link to="/about">About</router-link>
+    </template>
+  </van-nav-bar>
   <router-view />
 </template>
 
 <script setup>
-const onClickLeft = () => history.back();
 </script>
 
 <style lang="less" scoped>
